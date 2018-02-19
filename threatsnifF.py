@@ -6,7 +6,7 @@ import logging, sys
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import *
 import requests
-#'apikey': 'f40123527ec1fd9b9f67feb4cddaf9b13a764b81134ba5238750fbafd5e58e07'
+#'apikey': 'add your API key below'
 
 def auto_fun(args):
     # And continue
@@ -40,7 +40,7 @@ def ip_check(ipaddress):
     #Virus total API info
 
     url = 'https://www.virustotal.com/vtapi/v2/ip-address/report'
-    parameters = {'ip': ipaddress, 'apikey': 'f40123527ec1fd9b9f67feb4cddaf9b13a764b81134ba5238750fbafd5e58e07'}
+    parameters = {'ip': ipaddress, 'apikey': 'add your API key here'}
     response = urllib.urlopen('%s?%s' % (url, urllib.urlencode(parameters))).read()
     response_dict = json.loads(response)
     print response_dict
